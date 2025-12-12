@@ -1,0 +1,116 @@
+/* تنظیمات کلی */
+body {
+    margin: 0;
+    font-family: "Tahoma", sans-serif;
+    background: #f3f3f3;
+}
+
+/* هدر */
+header {
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* بخش معرفی */
+.hero {
+    background: linear-gradient(#00000077, #00000077),
+        url('https://picsum.photos/1200/500');
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background: #ff9900;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* بخش دوره‌ها */
+.courses {
+    padding: 40px;
+    text-align: center;
+}
+
+.course-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.course {
+    background: white;
+    width: 250px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #0002;
+}
+.btn {
+    display: inline-block;
+    background: #ff7f00;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.login-box {
+    width: 300px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #0002;
+    text-align: center;
+}
+
+.login-box input {
+    width: 90%;
+    padding: 8px;
+    margin: 8px 0;
+}
+body {
+    animation: fade 0.8s ease;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.course {
+    transition: transform .3s, box-shadow .3s;
+}
+
+.course:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px #0003;
+}
+.btn:hover, .hero button:hover {
+    background: #cc6600;
+    transform: scale(1.05);
+}
+.course-page {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #0002;
+}
+
+.course-page h2 {
+    margin-top: 30px;
+}
