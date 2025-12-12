@@ -1,72 +1,69 @@
-/* تنظیمات کلی */
+/* عمومی */
 body {
     margin: 0;
-    font-family: "Tahoma", sans-serif;
-    background: #f3f3f3;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    animation: fade 0.8s ease;
 }
 
-/* هدر */
+@keyframes fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 header {
-    background: #111;
+    background: #333;
     color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 20px;
+    padding: 10px;
+    text-align: center;
 }
 
-nav a {
+header nav a {
     color: white;
     margin: 0 10px;
     text-decoration: none;
-    font-weight: bold;
 }
 
-/* بخش معرفی */
 .hero {
-    background: linear-gradient(#00000077, #00000077),
-        url('https://picsum.photos/1200/500');
-    color: white;
     text-align: center;
-    padding: 80px 20px;
+    padding: 40px 20px;
+    background: #ffa50033;
 }
 
 .hero button {
     padding: 10px 20px;
-    background: #ff9900;
-    border: none;
-    color: white;
-    font-size: 18px;
-    border-radius: 8px;
+    font-size: 1rem;
     cursor: pointer;
+    transition: transform .3s, background .3s;
+    border: none;
+    border-radius: 6px;
+    background: #ff6600;
+    color: white;
 }
 
-/* بخش دوره‌ها */
-.courses {
-    padding: 40px;
-    text-align: center;
+.hero button:hover {
+    transform: scale(1.05);
+    background: #cc6600;
 }
 
-.course-list {
+.features {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
 }
 
-.course {
+.feature {
     background: white;
-    width: 250px;
     padding: 20px;
+    margin: 10px;
     border-radius: 12px;
+    flex: 1 1 200px;
+    text-align: center;
     box-shadow: 0 0 10px #0002;
 }
-.btn {
-    display: inline-block;
-    background: #ff7f00;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 8px;
-    text-decoration: none;
-}
+
+/* login */
 .login-box {
     width: 300px;
     margin: 40px auto;
@@ -82,15 +79,23 @@ nav a {
     padding: 8px;
     margin: 8px 0;
 }
-body {
-    animation: fade 0.8s ease;
+
+/* courses */
+.courses-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
 }
 
-@keyframes fade {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
 .course {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 12px;
+    flex: 1 1 200px;
+    text-align: center;
+    box-shadow: 0 0 10px #0002;
     transition: transform .3s, box-shadow .3s;
 }
 
@@ -98,10 +103,24 @@ body {
     transform: translateY(-8px);
     box-shadow: 0 12px 20px #0003;
 }
-.btn:hover, .hero button:hover {
-    background: #cc6600;
-    transform: scale(1.05);
+
+.course .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #ff6600;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: transform .3s, background .3s;
 }
+
+.course .btn:hover {
+    transform: scale(1.05);
+    background: #cc6600;
+}
+
+/* course page */
 .course-page {
     width: 80%;
     margin: 20px auto;
@@ -114,3 +133,31 @@ body {
 .course-page h2 {
     margin-top: 30px;
 }
+
+/* ریسپانسیو برای موبایل */
+@media screen and (max-width: 768px) {
+    .features, .courses-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature, .course {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .login-box {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .course-page {
+        width: 95%;
+        margin: 15px auto;
+    }
+}
+
